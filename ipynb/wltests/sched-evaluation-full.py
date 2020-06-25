@@ -176,7 +176,7 @@ for test in collector.tests(workload='homescreen'):
 
 for test in collector.tests(workload='idle'):
     logging.info("Results for: %s", test)
-    plot,result = collector.report(workload='idle', metric='VDD_total_energy',
+    plot,result = collector.report(workload='idle', metric='DCIN_total_energy',
                      test=test, sort_on='mean', ascending=True)
     results_nrj = results_nrj.append(result)
 
@@ -185,7 +185,7 @@ for test in collector.tests(workload='idle'):
 
 for test in collector.tests(workload='idle'):
     logging.info("Results for: %s", test)
-    plot,result = collector.report(workload='idle', metric='VDD_average_power',
+    plot,result = collector.report(workload='idle', metric='DCIN_average_power',
                      test=test, sort_on='mean', ascending=True)
     results_nrj = results_nrj.append(result)
 
