@@ -189,6 +189,85 @@ for test in collector.tests(workload='idle'):
                      test=test, sort_on='mean', ascending=True)
     results_nrj = results_nrj.append(result)
 
+# In[ ]:
+
+for test in collector.tests(workload='idle'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='idle', metric='VDD_total_energy',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='idle'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='idle', metric='VDD_average_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='suspend'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='suspend', metric='DCIN_average_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='suspend'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='suspend', metric='DCIN_total_energy',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='suspend'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='suspend', metric='VDD_average_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='suspend'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='suspend', metric='VDD_total_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='wk-1'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='wk-1', metric='DCIN_average_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='wk-1'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='wk-1', metric='DCIN_total_energy',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='wk-1'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='wk-1', metric='VDD_average_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
+
+# In[ ]:
+
+for test in collector.tests(workload='wk-1'):
+    logging.info("Results for: %s", test)
+    plot,result = collector.report(workload='wk-1', metric='VDD_total_power',
+                     test=test, sort_on='mean', ascending=True)
+    results_nrj = results_nrj.append(result)
 
 # # Vellamo
 
