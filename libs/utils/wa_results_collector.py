@@ -129,7 +129,7 @@ class WaResultsCollector(object):
 
         if base_dir:
             base_dir = os.path.expanduser(base_dir)
-            if not isinstance(wa_dirs, basestring):
+            if not isinstance(wa_dirs, str):
                 raise ValueError(
                     'If base_dir is provided, wa_dirs should be a regexp')
             regex = wa_dirs
@@ -168,7 +168,7 @@ class WaResultsCollector(object):
 
 
         common_prefix = os.path.commonprefix(kernel_refs.values())
-        for sha1, ref in kernel_refs.iteritems():
+        for sha1, ref in kernel_refs.items():
             kernel_refs[sha1] = ref[len(common_prefix):]
 
         df['kernel'] = df['kernel_sha1'].replace(kernel_refs)
@@ -307,7 +307,7 @@ class WaResultsCollector(object):
                 # different workload parameters will be amalgamated.
                 test = workload
 
-            rich_tag = ';'.join('{}={}'.format(k, v) for k, v in classifiers.iteritems())
+            rich_tag = ';'.join('{}={}'.format(k, v) for k, v in classifiers.items())
             tag = classifiers.get('tag', rich_tag)
 
             if job_id in tag_map:
@@ -362,7 +362,7 @@ class WaResultsCollector(object):
         if extra_dfs:
             df = df.append(extra_dfs)
 
-        for iteration, job_ids in skipped_jobs.iteritems():
+        for iteration, job_ids in skipped_jobs.items():
             self._log.warning("Skipped failed iteration %d for jobs:", iteration)
             self._log.warning("   %s", ', '.join(job_ids))
 
@@ -516,7 +516,7 @@ class WaResultsCollector(object):
         # that was used, which WA doesn't currently report directly.
         # TODO: once WA's reporting of this data has been cleaned up a bit I
         # think we can simplify this.
-        for artifact_name, path in artifacts.iteritems():
+        for artifact_name, path in artifacts.items():
             if os.stat(path).st_size == 0:
                 self._log.info(" no data for %s",  path)
                 continue
