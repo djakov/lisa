@@ -6,7 +6,7 @@
 	url = https://github.com/ARM-Software/trappy.git
 [submodule "libs/bart"]
 	path = libs/bart
-	url = https://github.com/ARM-Software/bart.git
+	url = https://git.linaro.org/people/georgi.djakov/bart.git
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/ARM-Software/lisa.wiki.git
