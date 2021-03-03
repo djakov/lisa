@@ -571,9 +571,13 @@ class WaResultsCollector(object):
             target_info = json.load(f)
 
         # Read the kernel release reported by the target
-        sha1 = KernelVersion(target_info['kernel_release']).sha1
-        if sha1:
-            return sha1
+        version = KernelVersion(target_info['kernel_release'])
+        if version.sha1:
+            return version.sha1
+
+        # No sha1, go for the release version
+        if version.release:
+            return version.release
 
         # Couldn't get the release sha1, default to reading it from the
         # directory name built by test_series
