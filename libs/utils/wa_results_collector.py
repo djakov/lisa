@@ -167,7 +167,7 @@ class WaResultsCollector(object):
                 kernel_refs[sha1] = sha1
 
 
-        common_prefix = os.path.commonprefix(kernel_refs.values())
+        common_prefix = os.path.commonprefix(list(kernel_refs.values()))
         for sha1, ref in kernel_refs.items():
             kernel_refs[sha1] = ref[len(common_prefix):]
 
