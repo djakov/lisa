@@ -70,7 +70,7 @@ extras_require["doc"] = [
 ]
 
 setup(
-    name='LISA',
+    name='lisa-linux',
     license='Apache License 2.0',
     version=lisa_version,
     maintainer='Arm Ltd.',
