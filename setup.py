@@ -127,6 +127,13 @@ setup(
         "Topic :: Software Development :: Testing",
         "Intended Audience :: Developers",
     ],
+    entry_points={
+        'console_scripts': [
+            'lisa-conf-cat=lisa.tools.lisa_conf_cat:main',
+            'lisa-platinfo-extract=lisa.tools.lisa_platinfo_extract:main',
+            'lisa-plot=lisa.tools.lisa_plot:main',
+        ],
+    },
 )
 
 # vim :set tabstop=4 shiftwidth=4 textwidth=80 expandtab
