@@ -65,7 +65,7 @@ extras_require={
 
 extras_require["doc"] = [
     "sphinx >= 1.8",
-    "sphinx_rtd_theme",
+    "sphinx_rtd_theme >= 0.5.2",
     "sphinxcontrib-plantuml",
     "nbsphinx",
 
